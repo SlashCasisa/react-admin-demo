@@ -1,6 +1,11 @@
 .ant-layout-header{
-    background:#fff;
+    background:#88A1FF;
+    display: flex;
+    color:#fff;
+    justify-content: space-between;
 }
 .ant-layout-sider{
-    background:#fff;
+    background:#6886f1;
+    height:calc(100vh - 132px);
+    color: #fff;
 }

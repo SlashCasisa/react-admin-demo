@@ -52,7 +52,7 @@ class Login extends Component {
                     this.enterLoading()
                     this.timer = setTimeout(() => {
                         message.success('登录成功!')
-                        this.props.history.push('/index')
+                        this.props.history.push('/admin')
                     }, 2000)
                 }
             })
