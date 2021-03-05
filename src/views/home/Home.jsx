@@ -29,38 +29,39 @@ class Home extends Component {
   render() {
     // let { auth } = JSON.parse(localStorage.getItem('user')) ? JSON.parse(localStorage.getItem('user')) : ''
     return (
-      <Layout>
-        <Header><div>后台管理</div><div>user</div></Header>
-        <Layout>
-          <Sider>
-            <Menu
-              onClick={this.handleClick}
-              defaultSelectedKeys={[this.state.activeMenu]}
-              mode="inline"
-            >
-                {routes.map(item => {
-                  return (
-                    <Menu.Item key={item.path}>
-                    {/* <Route
-                      key={item.path}
-                      path={item.path}
-                      exact={item.exact}
-                      render={props =>
-                          <item.component {...props} />
-                      }></Route> */}
-                       <Link to={item.path}>
-                        <span>{item.name}</span>
-                      </Link>
-                      </Menu.Item>
-                  )
-                })}
+      <div>admin</div>
+      // <Layout>
+      //   <Header><div>后台管理</div><div>user</div></Header>
+      //   <Layout>
+      //     <Sider>
+      //       <Menu
+      //         onClick={this.handleClick}
+      //         defaultSelectedKeys={[this.state.activeMenu]}
+      //         mode="inline"
+      //       >
+      //           {routes.map(item => {
+      //             return (
+      //               <Menu.Item key={item.path}>
+      //               {/* <Route
+      //                 key={item.path}
+      //                 path={item.path}
+      //                 exact={item.exact}
+      //                 render={props =>
+      //                     <item.component {...props} />
+      //                 }></Route> */}
+      //                  <Link to={item.path}>
+      //                   <span>{item.name}</span>
+      //                 </Link>
+      //                 </Menu.Item>
+      //             )
+      //           })}
               
-            </Menu>
-          </Sider>
-          <Content>Content</Content>
-        </Layout>
-        <Footer>Footer</Footer>
-      </Layout>
+      //       </Menu>
+      //     </Sider>
+      //     <Content>Content</Content>
+      //   </Layout>
+      //   <Footer>Footer</Footer>
+      // </Layout>
     )
   }
 
