@@ -20,6 +20,15 @@ const menus =global.menus;
 class CustomMenu extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            activeMenu: '/admin'
+          }
+          this.handleClick = e => {
+            console.log('click ', e);
+            this.setState({
+              activeMenu: e.key
+            })
+          };
     this.renderSubMenu = ({key, icon, title, subs}) => {
         return (
             <Menu.SubMenu key={key} title={<span>{icon && <Icon type={icon}/>}<span>{title}</span></span>}>
@@ -45,8 +54,9 @@ class CustomMenu extends React.Component {
     render() {
         return (
                 <Menu
-                defaultSelectedKeys={['1']}
-                defaultOpenKeys={['sub1']}
+                defaultSelectedKeys={['/admin']}
+                // defaultOpenKeys={['/admin']}
+                onClick={this.handleClick}
                 mode="inline"
             >
                 {
